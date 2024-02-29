@@ -1,5 +1,7 @@
 #pragma once 
 
+#include <array>
+#include "WebPublisher.hpp"
 
 template<typename ... S>
 class SensorCtrl : public WebPublisher
@@ -30,7 +32,6 @@ class SensorCtrl : public WebPublisher
         }, sn);
       }
 
-      //m_sensors.push_back(std::make_unique<sensor>(2));
     }
 
     void update_all() {
