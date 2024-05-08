@@ -5,13 +5,12 @@
 template<typename S, typename D>
 class Publisher
 {
-    std::vector<S> m_subs;
+    std::vector<S*> m_subs;
 
   public:
     void subscribe(S &s)
     {
-      m_subs.push_back(s);
-      on_subscribe(s);
+      m_subs.push_back(&s);
     }
 
     void notify(D &data)
@@ -23,9 +22,8 @@ class Publisher
 
       for (auto &s : m_subs)
       {
-        s.update(data);
+        s->update(data);
       }
     }
 
-    virtual void on_subscribe(S &s) {}
 };

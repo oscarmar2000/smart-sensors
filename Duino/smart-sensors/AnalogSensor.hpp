@@ -21,7 +21,7 @@ class AnalogPort : public Configurator<AnalogPort, AnalogConfig>
     AnalogConfig m_cfg;
 
   public:
-    typedef float InputType;
+    using InputType = float;
 
     //constexpr
     void do_config(const AnalogConfig cfg)
@@ -34,7 +34,7 @@ class AnalogPort : public Configurator<AnalogPort, AnalogConfig>
     }
 
     InputType read() {
-      return ((float)100)*m_step + m_cfg.min; // analogRead(m_port);
+      return static_cast<float>(analogRead(m_port)) * m_step + m_cfg.min;
     }
 
 };
@@ -46,7 +46,7 @@ class DefAnalogProc
 {
   public:
     AnalogPort::InputType calc(AnalogPort::InputType in) {
-      return in * 1.5;
+      return in;
     }
 };
 

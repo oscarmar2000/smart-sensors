@@ -1,0 +1,75 @@
+{
+    "project": {
+        "network": {
+            "wifi": {
+                "ssid":"TP-Link_176C",
+                "password":"Casamar23#"
+            }
+        },
+        "boards":[
+            {
+                "name": "room1",
+                "board_type": "esp32:esp32:lolin_s2_mini",
+                "sensors":[
+                    {
+                        "name": "enable",
+                        "type": "digital",
+                        "config": {
+                            "pin": 1
+                        }
+                    },
+                    {
+                        "name": "temp1",
+                        "type": "analog",
+                        "config": {
+                            "pin": 1,
+                            "min": 0,
+                            "max": 5.0,
+                            "resol": 1024
+                        }
+                    },
+                    {
+                        "name": "temp2",
+                        "type": "discrete",
+                        "config": {
+                            "pin": 1
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "room2",
+                "board_type": "esp32:esp32:lolin_s2_mini",
+                "sensors":[
+                    {
+                        "name": "enable",
+                        "type": "digital",
+                        "config": {
+                            "pin": 1
+                        }
+                    },
+                    {
+                        "name": "temp1",
+                        "type": "analog",
+                        "config": {
+                            "pin": 1,
+                            "min": 0,
+                            "max": 5.0,
+                            "resol": 1024
+                        }
+                    },
+                    {
+                        "name": "temp2",
+                        "type": "analog",
+                        "config": {
+                            "pin": 1,
+                            "min": 0,
+                            "max": 5.0,
+                            "resol": 1024
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

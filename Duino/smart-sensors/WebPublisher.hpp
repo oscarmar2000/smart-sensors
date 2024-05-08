@@ -55,13 +55,13 @@ class WebSubscriberProxy
       {
         return;
       }
-      
+
       WiFiClient client;
       Serial.print("sending update to: ");
       Serial.print(&ip_from_int(cl_host)[0]);
       Serial.print(":");
       Serial.println(cl_port);
-      
+
       client.connect(&ip_from_int(cl_host)[0], cl_port);
 
       const size_t capacity = JSON_OBJECT_SIZE(4) ; //+ JSON_ARRAY_SIZE(2);

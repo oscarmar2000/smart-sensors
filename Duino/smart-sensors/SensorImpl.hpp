@@ -17,7 +17,7 @@ class SensorImpl
 
     typedef Tp DataTp;
 
-    static constexpr int TpID = snsrTp_val<Derived>;
+    static constexpr int TpID = Configs::snsrTp_val<Derived>;
 
     constexpr SensorImpl(const Config cfg)
       : m_cfg(cfg)

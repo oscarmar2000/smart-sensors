@@ -24,7 +24,7 @@ class DigitalPort : public Configurator<DigitalPort, DigitalConfig>
     int m_port{};
 
   public:
-    typedef bool InputType;
+    using InputType = bool;
 
     //constexpr
     void do_config(const DigitalConfig cfg) {
