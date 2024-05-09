@@ -4,8 +4,6 @@
 #include "smart-sensors/SensorConfig.hpp"
 #include "smart-sensors/SensorCtrl.hpp"
 
-#include "smart-sensors/SHT3xSensor.hpp"
-
 const char *ssid = "WIFI_NETWORK_NAME";
 const char *password = "SSID_PASSWORD";
 

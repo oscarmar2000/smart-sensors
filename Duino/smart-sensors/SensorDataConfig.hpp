@@ -1,9 +1,9 @@
 #pragma once
 
-#include "DigitalSensor.hpp"
-#include "AnalogSensor.hpp"
-#include "DiscreteSensor.hpp"
-#include "SHT3xSensor.hpp"
+#include "sensors/DigitalSensor.hpp"
+#include "sensors/AnalogSensor.hpp"
+#include "sensors/DiscreteSensor.hpp"
+#include "sensors/SHT3xSensor.hpp"
 
 
 typedef std::variant<DigitalSensor::DataTp,

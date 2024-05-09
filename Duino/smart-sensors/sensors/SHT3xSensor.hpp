@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Configurator.hpp"
-#include "SensorImpl.hpp"
+#include "../Configurator.hpp"
+#include "../SensorImpl.hpp"
 #include "Wire.h"
 #include "Adafruit_SHT31.h"
 
